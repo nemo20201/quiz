@@ -1,11 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html 
+
+
+lang="en">
 <!--
 
 نيمو لاتخمط الكود
  -->
 
 <head>
+
     <script data-ad-client="ca-pub-4897595700312762" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
     <title>Quiz en</title>
@@ -52,7 +56,64 @@
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="60">
+<script language=javascript>
 
+
+var message="ممنوع النسخ!";
+
+///////////////////////////////////
+function clickIE4(){
+if (event.button==2){
+alert(message);
+return false;
+}
+}
+
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+alert(message);
+return false;
+}
+}
+}
+
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS4;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+}
+
+document.oncontextmenu=new Function("alert(message);return false")
+
+// -->
+</script>
+<script type='text/javascript'>
+
+
+//form tags to omit in NS6+:
+var omitformtags=["input", "textarea", "select"]
+
+omitformtags=omitformtags.join("|")
+
+function disableselect(e){
+if (omitformtags.indexOf(e.target.tagName.toLowerCase())==-1)
+return false
+}
+
+function reEnable(){
+return true
+}
+
+if (typeof document.onselectstart!="undefined")
+document.onselectstart=new Function ("return false")
+else{
+document.onmousedown=disableselect
+document.onmouseup=reEnable
+}
+</script>
     <!-- Nav Menu -->
 
     <div class="nav-menu fixed-top">
